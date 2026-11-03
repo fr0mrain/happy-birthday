@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#170b25" />
+  <meta name="description" content="Письмо с Днём Рождения для Маши — с теплом, светом и верой в тебя." />
+  <title>Маша, с Днём Рождения</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Marck+Script&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+
+  <!-- ───────────────────────── ИНТРО: КОНВЕРТ ───────────────────────── -->
+  <main class="intro" id="intro">
+    <div class="sky" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+      <div class="mountain mountain-back"></div>
+      <div class="mountain mountain-front"></div>
+    </div>
+
+    <div class="intro-inner">
+      <p class="eyebrow">Маша, это тебе</p>
+
+      <h1 class="intro-title">
+        Тебе <span class="script-gradient">письмо</span>
+      </h1>
+
+      <p class="intro-sub">
+        Здесь спрятаны слова, которые хочется сказать лично.
+        Одно касание — и конверт откроется.
+      </p>
+
+      <button class="envelope" id="envelope" type="button" aria-label="Открыть письмо для Маши">
+        <span class="env-glow" aria-hidden="true"></span>
+        <span class="env">
+          <span class="env-back" aria-hidden="true"></span>
+          <span class="env-letter" aria-hidden="true">
+            <span class="env-letter-lines"></span>
+            <span class="env-letter-heart">♡</span>
+          </span>
+          <span class="env-pocket" aria-hidden="true"></span>
+          <span class="env-flap" aria-hidden="true"></span>
+          <span class="env-seal" aria-hidden="true">М</span>
+        </span>
+      </button>
+
+      <p class="hint"><span class="hint-dot"></span>нажми на конверт</p>
+    </div>
+
+    <footer class="intro-foot">написано с теплом · 2026</footer>
+  </main>
+
+  <!-- ───────────────────────── ПИСЬМО ───────────────────────── -->
+  <div class="letter-view" id="letterView" aria-hidden="true">
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+    <header class="letter-top">
+      <button class="ghost-btn" id="backBtn" type="button">
+        <span aria-hidden="true">←</span> к конверту
+      </button>
+      <span class="letter-top-label">письмо для Маши</span>
+    </header>
+
+    <article class="paper">
+      <span class="tape tape-left" aria-hidden="true"></span>
+      <span class="tape tape-right" aria-hidden="true"></span>
+
+      <header class="letter-head">
+        <p class="letter-kicker">с днём рождения</p>
+        <h2 class="letter-name">Маша,<span class="name-spark" aria-hidden="true">✦</span></h2>
+        <p class="letter-lead">
+          Ну, с Днём Рождения, ахах. Что могу сказать?
+          Желаю тебе всего самого лучшего — и даже немного больше.
+        </p>
+      </header>
+
+      <div class="divider" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>
+
+      <div class="letter-body">
+        <p class="reveal">
+          Во-первых, <span class="hl">сдать английский до C2</span> (ахах).
+          Во-вторых, выучить немецкий. В-третьих, продолжать заниматься творчеством.
+          Продолжай в том же духе — ты прекрасно справляешься!
+        </p>
+
+        <p class="reveal">
+          Двигайся дальше, слушай своё сердце и иди за Богом.
+          У Него на тебя <strong>большие — даже грандиозные — планы</strong>.
+        </p>
+
+        <p class="reveal">
+          Береги себя, цени себя, верь в себя.
+          Если что-то не получается — не расстраивайся:
+          это значит, что <span class="hl">скоро будет прогресс</span>.
+        </p>
+
+        <p class="reveal">
+          Оставайся такой же хорошей, доброй и весёлой.
+          И я верю, что всё, что тебя ждёт на твоём пути,
+          приведёт тебя к чему-то хорошему.
+        </p>
+
+        <p class="reveal">
+          Продолжай двигаться в творчестве — у тебя это шикарно получается.
+          Встречай закаты с мыслями о том, какой был прекрасный день.
+          Продолжай видеть во всём позитив!
+        </p>
+
+        <p class="reveal accent-line">
+          Я всегда на твоей стороне. И буду оставаться на ней до конца.
+        </p>
+
+        <p class="reveal final-line">
+          Маша, с Днём Рождения!
+        </p>
+      </div>
+
+      <div class="signature reveal">
+        <p class="signature-pre">с теплом и верой в тебя,</p>
+        <p class="signature-name">Не забудь дать оценку моей креативности <span aria-hidden="true">хыхы</span></p>
+      </div>
+
+      <p class="ps reveal">
+        <span class="ps-mark">P.S.</span>
+        Сегодня обязательно ложись пораньше, завтра принимать поздравления.
+      </p>
+
+      <div class="closing-note reveal">
+        <p class="from-line">
+          <span class="from-name">от Лео</span>
+          <span class="from-for">для самого прекрасного творческого человека</span>
+        </p>
+        <div class="closing-rule" aria-hidden="true"><span>✦</span></div>
+        <p class="best-line">ты лучшая!</p>
+        <p class="remember-line">Помни это <span aria-hidden="true">✦</span></p>
+      </div>
+    </article>
+
+    <footer class="letter-foot">
+      <span aria-hidden="true">✦</span> написано от всего сердца <span aria-hidden="true">✦</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
